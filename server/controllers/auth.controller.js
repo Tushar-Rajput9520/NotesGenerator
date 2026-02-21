@@ -9,12 +9,10 @@ export const googleAuth=async(req,res)=>{
       user=await User.create({name,email})
     }
     const token=await getToken(user._id)
-   res.cookie("token", token, {
+ res.cookie("token", token, {
   httpOnly: true,
   secure: true,
   sameSite: "none",
-  path: "/",
-  maxAge: 7 * 24 * 60 * 60 * 1000
 });
     return res.status(200).json({message:"Authentication successful",user})
   }catch(err){
