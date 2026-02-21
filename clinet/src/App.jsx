@@ -11,7 +11,7 @@ import Pricing from './pages/Pricing'
 import History from './pages/History'
 import PaymentSuccess from './pages/PaymentSuccess'
 import PaymentFailer from './pages/PaymentFailer'
-export const serverUrl="http://localhost:5000"
+export const serverUrl="https://examnotesai-c5qn.onrender.com"
 
 function App() {
   const dispatch=useDispatch()
